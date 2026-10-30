@@ -55,6 +55,41 @@ Open your browser and navigate to:
 
 ---
 
+## ☁️ Deploying to Render (Step-by-Step)
+
+If you are hosting your app on [Render](https://render.com) (free Web Service):
+
+### 1. Push code to your GitHub Repository
+Make sure your updated code (including explicit `.ts` import extensions) is pushed to GitHub.
+
+### 2. Create a Web Service on Render
+1. Go to your [Render Dashboard](https://dashboard.render.com/) and click **New + > Web Service**.
+2. Connect your GitHub repository.
+3. Configure the settings:
+   - **Name**: `fitpulse-ai` (or any name you prefer)
+   - **Language**: `Node`
+   - **Branch**: `main` (or your active branch)
+   - **Region**: Any (e.g. Oregon, Frankfurt, Singapore)
+   - **Build Command**:
+     ```bash
+     npm install && npm run build
+     ```
+   - **Start Command**:
+     ```bash
+     node server.ts
+     ```
+     *(Note: You can also use `npx tsx server.ts` if your hosting environment uses an older Node version.)*
+
+### 3. Add Environment Variables
+Under the **Environment Variables** section on Render, add:
+- `NODE_ENV` = `production`
+- `JWT_SECRET` = `any_strong_random_secret_string_here`
+- `GEMINI_API_KEY` = `your_gemini_api_key` *(optional — if omitted, the app gracefully falls back to the local sports science engine)*
+
+Render automatically injects the `PORT` variable, and `server.ts` will bind to it and serve both the production static SPA and the backend REST API!
+
+---
+
 ## 🧪 Running Unit Tests
 To execute the automated unit test suite (testing BMI, Mifflin-St Jeor BMR, TDEE activity multipliers, macro deficit/surplus formulas, and notification scheduler rules):
 ```bash

@@ -1,6 +1,6 @@
 import { GoogleGenAI } from '@google/genai';
-import { UserProfile, WorkoutPlan, DietPlan, ExerciseRecord } from './db';
-import { calculateBMI, calculateBMR, calculateTDEE, calculateMacroTargets } from '../src/utils/fitnessCalc';
+import type { UserProfile, WorkoutPlan, DietPlan, ExerciseRecord } from './db.ts';
+import { calculateBMI, calculateBMR, calculateTDEE, calculateMacroTargets } from '../src/utils/fitnessCalc.ts';
 
 let aiClient: GoogleGenAI | null = null;
 
@@ -40,7 +40,7 @@ export async function generateFitnessPlan(
   const bmiInfo = calculateBMI(profile.weightKg, profile.heightCm);
   const bmr = calculateBMR(profile.weightKg, profile.heightCm, profile.age, profile.gender);
   const tdee = calculateTDEE(bmr, profile.activityLevel);
-  const macros = calculateMacroTargets(tdee, profile.weightKg, profile.fitnessGoal, profile.dietPreference);
+  const macros = calculateMacroTargets(tdee, profile.weightKg, profile.fitnessGoal, profile.dietaryPreference);
 
   const client = getAiClient();
 
@@ -53,7 +53,7 @@ Generate a personalized fitness recommendation for this user:
 - Calculated BMI: ${bmiInfo.bmi} (${bmiInfo.category})
 - Fitness Goal: ${profile.fitnessGoal}
 - Activity Level: ${profile.activityLevel}
-- Dietary Preference: ${profile.dietPreference}
+- Dietary Preference: ${profile.dietaryPreference}
 - Workout Experience: ${profile.workoutExperience}
 - Medical Notes / Injuries: ${profile.medicalNotes || 'None reported'}
 - Calculated TDEE: ${tdee} kcal, Calculated Target Calories: ${macros.dailyCalories} kcal
@@ -97,7 +97,7 @@ Return JSON conforming STRICTLY to this format:
   "dietPlan": {
     "title": "Custom Nutrition Plan",
     "goal": "${profile.fitnessGoal}",
-    "dietaryPreference": "${profile.dietPreference}",
+    "dietaryPreference": "${profile.dietaryPreference}",
     "dailyCalories": ${macros.dailyCalories},
     "proteinG": ${macros.proteinGrams},
     "carbsG": ${macros.carbsGrams},
@@ -322,7 +322,7 @@ function generateAlgorithmicPlan(
     },
   ];
 
-  const isVeg = profile.dietPreference === 'Vegetarian' || profile.dietPreference === 'Vegan';
+  const isVeg = profile.dietaryPreference === 'Vegetarian' || profile.dietaryPreference === 'Vegan';
 
   const breakfastItem = isVeg
     ? { name: 'Tofu Scramble with Spinach & Oats Bowl', portion: '1 bowl + 80g oats', calories: Math.round(macros.dailyCalories * 0.28), protein: Math.round(macros.proteinGrams * 0.25), carbs: Math.round(macros.carbsGrams * 0.3), fat: Math.round(macros.fatGrams * 0.25) }
@@ -361,9 +361,9 @@ function generateAlgorithmicPlan(
       ],
     },
     dietPlan: {
-      title: `${profile.dietPreference} ${profile.fitnessGoal} Nutrition Plan`,
+      title: `${profile.dietaryPreference} ${profile.fitnessGoal} Nutrition Plan`,
       goal: profile.fitnessGoal,
-      dietaryPreference: profile.dietPreference,
+      dietaryPreference: profile.dietaryPreference,
       dailyCalories: macros.dailyCalories,
       proteinG: macros.proteinGrams,
       carbsG: macros.carbsGrams,

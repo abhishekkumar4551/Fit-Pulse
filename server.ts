@@ -1,13 +1,13 @@
-import express, { Request, Response, NextFunction } from 'express';
+import express, { type Request, type Response, type NextFunction } from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import dotenv from 'dotenv';
-import { db, UserRole } from './server/db';
-import { generateFitnessPlan } from './server/ai';
-import { calculateBMI, calculateBMR, calculateTDEE, calculateMacroTargets } from './src/utils/fitnessCalc';
-import { startWorkoutReminderBackgroundJob, executeWorkoutReminderJob } from './server/scheduler';
+import { db, type UserRole } from './server/db.ts';
+import { generateFitnessPlan } from './server/ai.ts';
+import { calculateBMI, calculateBMR, calculateTDEE, calculateMacroTargets } from './src/utils/fitnessCalc.ts';
+import { startWorkoutReminderBackgroundJob, executeWorkoutReminderJob } from './server/scheduler.ts';
 
 dotenv.config();
 

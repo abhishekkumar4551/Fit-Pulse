@@ -1,5 +1,5 @@
-import { db, NotificationItem, User } from './db';
-import { shouldTriggerReminder, generateReminderContent } from '../src/utils/schedulerUtils';
+import { db, type NotificationItem, type User } from './db.ts';
+import { shouldTriggerReminder, generateReminderContent } from '../src/utils/schedulerUtils.ts';
 
 export interface BackgroundJobResult {
   timestamp: string;
