@@ -90,6 +90,35 @@ Render automatically injects the `PORT` variable, and `server.ts` will bind to i
 
 ---
 
+## ▲ Deploying to Vercel (Step-by-Step)
+
+FitPulse AI includes full out-of-the-box support for [Vercel](https://vercel.com):
+
+### 1. Import Repository into Vercel
+1. Go to your [Vercel Dashboard](https://vercel.com/dashboard) and click **Add New... > Project**.
+2. Select your `Fit-Pulse` GitHub repository and click **Import**.
+
+### 2. Configure Project Settings
+Vercel will automatically detect the settings from `vercel.json` and `package.json`:
+- **Framework Preset**: `Vite`
+- **Root Directory**: `./` (leave default)
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist`
+
+### 3. Add Environment Variables
+Under the **Environment Variables** accordion, add:
+- `JWT_SECRET` = `your-secure-random-jwt-key`
+- `GEMINI_API_KEY` = `your_gemini_api_key` *(optional)*
+
+### 4. Click Deploy
+Click **Deploy**! Vercel will:
+- Build and host the optimized React frontend on the Vercel Global Edge CDN with SPA client-side routing.
+- Automatically route all `/api/*` REST endpoints to the serverless handler in `api/index.ts`.
+- Run the scheduled daily workout reminder cron job via `/api/cron/reminders` (defined in `vercel.json`).
+- Provide an instant health check endpoint at `https://your-app.vercel.app/api/health`.
+
+---
+
 ## 🧪 Running Unit Tests
 To execute the automated unit test suite (testing BMI, Mifflin-St Jeor BMR, TDEE activity multipliers, macro deficit/surplus formulas, and notification scheduler rules):
 ```bash
@@ -113,6 +142,8 @@ For quick demonstration and B.Tech CSE evaluation, the app includes an instant *
 ## 📁 Project Architecture & Folder Structure
 
 ```
+├── api/
+│   └── index.ts                # Vercel Serverless Function entry point
 ├── data/
 │   └── fitness_db.json         # MongoDB-compatible document store (persisted to disk)
 ├── server/
@@ -147,6 +178,7 @@ For quick demonstration and B.Tech CSE evaluation, the app includes an instant *
 │   ├── main.tsx                # React DOM entry point
 │   └── index.css               # Tailwind CSS styles
 ├── server.ts                   # Express server mounting APIs and Vite middlewares
+├── vercel.json                 # Vercel deployment configuration, rewrites & cron schedules
 ├── package.json                # Project dependencies and npm scripts
 └── tsconfig.json               # TypeScript configuration
 ```

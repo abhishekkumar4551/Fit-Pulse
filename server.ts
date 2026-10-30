@@ -900,10 +900,38 @@ app.post('/api/notifications/test-trigger', authenticateToken, async (req: AuthR
 });
 
 // ==========================================
+// HEALTH CHECK & CRON ROUTES
+// ==========================================
+
+// Health check endpoint (for Vercel, Render, and uptime monitors)
+app.get('/api/health', (_req: Request, res: Response) => {
+  return res.json({
+    status: 'ok',
+    environment: process.env.VERCEL ? 'vercel-serverless' : (process.env.NODE_ENV || 'development'),
+    timestamp: new Date().toISOString(),
+  });
+});
+
+// Cron job endpoint for Vercel Cron or external scheduled runners
+app.get('/api/cron/reminders', async (_req: Request, res: Response) => {
+  try {
+    const jobResult = await executeWorkoutReminderJob();
+    return res.json({
+      success: true,
+      message: 'Workout reminder cron job executed successfully',
+      jobResult,
+    });
+  } catch (err: any) {
+    console.error('Cron job error:', err);
+    return res.status(500).json({ error: 'Failed to execute cron job: ' + err.message });
+  }
+});
+
+// ==========================================
 // VITE SPA INTEGRATION & STATIC SERVING
 // ==========================================
 
-async function startServer() {
+export async function startServer() {
   // Start background worker job for workout reminders
   startWorkoutReminderBackgroundJob(60 * 1000);
 
@@ -931,7 +959,14 @@ async function startServer() {
   });
 }
 
-startServer().catch((err) => {
-  console.error('Server failed to start:', err);
-  process.exit(1);
-});
+// In standard Node environments (Render, Cloud Run, local), start the server directly.
+// On Vercel, the app is imported and served via the serverless function in api/index.ts.
+if (!process.env.VERCEL) {
+  startServer().catch((err) => {
+    console.error('Server failed to start:', err);
+    process.exit(1);
+  });
+}
+
+export default app;
+
