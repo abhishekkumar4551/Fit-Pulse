@@ -117,6 +117,9 @@ Click **Deploy**! Vercel will:
 - Run the scheduled daily workout reminder cron job via `/api/cron/reminders` (defined in `vercel.json`).
 - Provide an instant health check endpoint at `https://your-app.vercel.app/api/health`.
 
+> **Tip (Vercel Build Cache / Network Reset Troubleshooting):**
+> If you ever encounter an `ECONNRESET` during `npm install` on Vercel due to transient public npm registry drops, the included `.npmrc` automatically retries up to 5 times. You can also trigger a clean build on Vercel by navigating to **Deployments > [Latest Deployment] > ... > Redeploy** and selecting **Redeploy with existing Build Cache unchecked**.
+
 ---
 
 ## 🧪 Running Unit Tests
