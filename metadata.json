@@ -1,0 +1,8 @@
+{
+  "name": "FitPulse AI - Personalized Fitness & Nutrition Platform",
+  "description": "Full-stack personalized AI fitness and nutrition web application with role-based access, adaptive workout plans, diet suggestions, calorie targets, and progress analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

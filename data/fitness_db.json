@@ -1,0 +1,848 @@
+{
+  "users": [
+    {
+      "id": "usr-1",
+      "name": "Alex Mercer",
+      "email": "alex@fitpulse.ai",
+      "passwordHash": "$2b$10$o1trs3/RL9Guu1okq.q6OOGZByRB17PI3yyoW7/8aRzq7MdO8GeqO",
+      "role": "user",
+      "assignedStaffId": "usr-2",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2026-09-30T13:13:12.418Z"
+    },
+    {
+      "id": "usr-2",
+      "name": "Coach Sarah Jenkins",
+      "email": "coach.sarah@fitpulse.ai",
+      "passwordHash": "$2b$10$o1trs3/RL9Guu1okq.q6OOGZByRB17PI3yyoW7/8aRzq7MdO8GeqO",
+      "role": "staff",
+      "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2026-08-31T13:13:12.418Z"
+    },
+    {
+      "id": "usr-3",
+      "name": "System Admin",
+      "email": "admin@fitpulse.ai",
+      "passwordHash": "$2b$10$o1trs3/RL9Guu1okq.q6OOGZByRB17PI3yyoW7/8aRzq7MdO8GeqO",
+      "role": "admin",
+      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2026-08-01T13:13:12.418Z"
+    }
+  ],
+  "userProfiles": [
+    {
+      "id": "prof-1",
+      "userId": "usr-1",
+      "age": 26,
+      "gender": "Male",
+      "heightCm": 178,
+      "weightKg": 75.5,
+      "targetWeightKg": 80,
+      "fitnessGoal": "Muscle Gain",
+      "activityLevel": "Moderately Active",
+      "dietaryPreference": "Non-Vegetarian",
+      "workoutExperience": "Intermediate",
+      "medicalNotes": "Slight past left shoulder tightness, focus on warmup.",
+      "bmr": 1740,
+      "tdee": 2697,
+      "dailyCalories": 2950,
+      "targetProtein": 165,
+      "targetCarbs": 370,
+      "targetFat": 85,
+      "waterLiters": 3.2,
+      "updatedAt": "2026-10-30T13:13:12.418Z"
+    },
+    {
+      "id": "prof-1793366058667",
+      "userId": "usr-2",
+      "age": 25,
+      "gender": "Male",
+      "heightCm": 175,
+      "weightKg": 70,
+      "targetWeightKg": 70,
+      "fitnessGoal": "General Fitness",
+      "activityLevel": "Moderately Active",
+      "dietaryPreference": "Non-Vegetarian",
+      "workoutExperience": "Beginner",
+      "bmr": 1680,
+      "tdee": 2604,
+      "dailyCalories": 2600,
+      "targetProtein": 140,
+      "targetCarbs": 325,
+      "targetFat": 72,
+      "waterLiters": 2.9,
+      "updatedAt": "2026-10-30T13:14:18.667Z"
+    },
+    {
+      "id": "prof-1793366064966",
+      "userId": "usr-3",
+      "age": 25,
+      "gender": "Male",
+      "heightCm": 175,
+      "weightKg": 70,
+      "targetWeightKg": 70,
+      "fitnessGoal": "General Fitness",
+      "activityLevel": "Moderately Active",
+      "dietaryPreference": "Non-Vegetarian",
+      "workoutExperience": "Beginner",
+      "bmr": 1680,
+      "tdee": 2604,
+      "dailyCalories": 2600,
+      "targetProtein": 140,
+      "targetCarbs": 325,
+      "targetFat": 72,
+      "waterLiters": 2.9,
+      "updatedAt": "2026-10-30T13:14:24.966Z"
+    }
+  ],
+  "workoutPlans": [
+    {
+      "id": "plan-1",
+      "userId": "usr-1",
+      "title": "Hypertrophy Upper/Lower 4-Day Split",
+      "goal": "Muscle Gain",
+      "experienceLevel": "Intermediate",
+      "splitType": "Upper / Lower",
+      "days": [
+        {
+          "dayName": "Day 1: Upper Body Strength & Power",
+          "focus": "Chest, Back, Delts & Arms",
+          "estimatedDurationMin": 55,
+          "exercises": [
+            {
+              "id": "ex-1",
+              "name": "Barbell Bench Press",
+              "muscleGroup": "Chest",
+              "sets": 4,
+              "reps": "6-8",
+              "restSec": 120,
+              "weightRecommendation": "70-80% 1RM",
+              "notes": "Control descent for 2 seconds, pause on chest, explode up."
+            },
+            {
+              "id": "ex-8",
+              "name": "Bent-Over Barbell Row",
+              "muscleGroup": "Back",
+              "sets": 4,
+              "reps": "8-10",
+              "restSec": 90,
+              "weightRecommendation": "Moderate heavy",
+              "notes": "Drive elbows toward hips, squeeze scapulae."
+            },
+            {
+              "id": "ex-10",
+              "name": "Overhead Barbell Military Press",
+              "muscleGroup": "Shoulders",
+              "sets": 3,
+              "reps": "8-10",
+              "restSec": 90,
+              "notes": "Keep core tight, do not lean back."
+            },
+            {
+              "id": "ex-12",
+              "name": "Standing Dumbbell Bicep Curls",
+              "muscleGroup": "Arms",
+              "sets": 3,
+              "reps": "12",
+              "restSec": 60,
+              "notes": "Supinate wrists at top for maximal contraction."
+            }
+          ]
+        },
+        {
+          "dayName": "Day 2: Lower Body Quad & Glute Focus",
+          "focus": "Quads, Glutes & Calves",
+          "estimatedDurationMin": 60,
+          "exercises": [
+            {
+              "id": "ex-4",
+              "name": "Barbell Back Squat",
+              "muscleGroup": "Legs",
+              "sets": 4,
+              "reps": "6-8",
+              "restSec": 150,
+              "weightRecommendation": "Heavy working weight",
+              "notes": "Maintain neutral spine and full depth."
+            },
+            {
+              "id": "ex-5",
+              "name": "Romanian Deadlift (RDL)",
+              "muscleGroup": "Legs",
+              "sets": 3,
+              "reps": "8-10",
+              "restSec": 90,
+              "notes": "Feel deep stretch in hamstrings without rounding back."
+            },
+            {
+              "id": "ex-6",
+              "name": "Walking Dumbbell Lunges",
+              "muscleGroup": "Legs",
+              "sets": 3,
+              "reps": "12 per leg",
+              "restSec": 75,
+              "notes": "Step forward cleanly, keep torso upright."
+            },
+            {
+              "id": "ex-14",
+              "name": "Hanging Leg Raises",
+              "muscleGroup": "Core",
+              "sets": 3,
+              "reps": "12-15",
+              "restSec": 60,
+              "notes": "Prevent body swing, roll pelvis upward."
+            }
+          ]
+        },
+        {
+          "dayName": "Day 3: Active Rest & Recovery",
+          "focus": "Mobility, Light Cardio & Core",
+          "estimatedDurationMin": 30,
+          "exercises": [
+            {
+              "id": "ex-3",
+              "name": "Push-Ups (Strict Form)",
+              "muscleGroup": "Chest",
+              "sets": 3,
+              "reps": "15",
+              "restSec": 60,
+              "notes": "Slow controlled tempo for blood flow."
+            },
+            {
+              "id": "ex-15",
+              "name": "High Intensity Interval Sprint (HIIT)",
+              "muscleGroup": "Cardio",
+              "sets": 6,
+              "reps": "20s sprint / 40s rest",
+              "restSec": 60,
+              "notes": "Moderate-high cardiovascular conditioning."
+            }
+          ]
+        }
+      ],
+      "generatedByAI": true,
+      "safetyTips": [
+        "Perform a 5-10 minute dynamic warmup before heavy lifts.",
+        "Always use safety collars on barbells.",
+        "Stop immediately if experiencing sharp joint pain (especially in shoulders or knees).",
+        "Stay properly hydrated with at least 500ml water during workouts."
+      ],
+      "createdAt": "2026-10-30T13:13:12.418Z"
+    }
+  ],
+  "exerciseRecords": [
+    {
+      "id": "ex-1",
+      "name": "Barbell Bench Press",
+      "muscleGroup": "Chest",
+      "category": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "instructions": [
+        "Lie back on a flat bench. Grip the barbell with hands slightly wider than shoulder-width.",
+        "Unrack the bar and hold it straight over your chest with arms locked.",
+        "Inhale and lower the bar slowly until it lightly touches your mid-chest.",
+        "Drive the bar back up explosively while exhaling, keeping shoulder blades retracted."
+      ],
+      "tips": "Keep your feet firmly planted on the floor and maintain a natural arch in your lower back.",
+      "primaryMuscle": "Pectoralis Major",
+      "secondaryMuscles": [
+        "Triceps Brachii",
+        "Anterior Deltoid"
+      ]
+    },
+    {
+      "id": "ex-2",
+      "name": "Incline Dumbbell Press",
+      "muscleGroup": "Chest",
+      "category": "Hypertrophy",
+      "equipment": "Dumbbells",
+      "difficulty": "Intermediate",
+      "instructions": [
+        "Set an adjustable bench to an incline of 30-45 degrees.",
+        "Hold a dumbbell in each hand resting on your thighs, then kick them up to shoulder height.",
+        "Press the dumbbells upwards and together over your upper chest.",
+        "Lower with control until elbows reach approximately 90 degrees."
+      ],
+      "tips": "Do not bounce at the bottom. Control the eccentric phase for 2-3 seconds.",
+      "primaryMuscle": "Clavicular Head (Upper Chest)",
+      "secondaryMuscles": [
+        "Triceps",
+        "Front Delts"
+      ]
+    },
+    {
+      "id": "ex-3",
+      "name": "Push-Ups (Strict Form)",
+      "muscleGroup": "Chest",
+      "category": "Calisthenics",
+      "equipment": "Bodyweight",
+      "difficulty": "Beginner",
+      "instructions": [
+        "Start in a high plank position with hands slightly outside shoulders.",
+        "Keep core braced and body in a straight line from heels to head.",
+        "Lower chest until 2 inches from the floor, elbows tracking at a 45-degree angle.",
+        "Push back up to the starting position."
+      ],
+      "tips": "Avoid flaring your elbows 90 degrees outward to protect your shoulder rotator cuffs.",
+      "primaryMuscle": "Chest",
+      "secondaryMuscles": [
+        "Core",
+        "Triceps"
+      ]
+    },
+    {
+      "id": "ex-4",
+      "name": "Barbell Back Squat",
+      "muscleGroup": "Legs",
+      "category": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "instructions": [
+        "Position the bar across your upper traps, step back, and set feet shoulder-width apart.",
+        "Break at hips and knees simultaneously, lowering hips down and back.",
+        "Descend until thighs are parallel or below parallel to the floor.",
+        "Drive through your mid-foot and heel to return to standing."
+      ],
+      "tips": "Keep chest upright and push knees slightly outward along the line of your toes.",
+      "primaryMuscle": "Quadriceps",
+      "secondaryMuscles": [
+        "Gluteus Maximus",
+        "Hamstrings",
+        "Core"
+      ]
+    },
+    {
+      "id": "ex-5",
+      "name": "Romanian Deadlift (RDL)",
+      "muscleGroup": "Legs",
+      "category": "Hypertrophy",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "instructions": [
+        "Stand holding barbell at thighs with an overhand grip.",
+        "Hinge at hips, pushing your butt back while keeping a slight soft bend in knees.",
+        "Lower the bar along your shins until you feel a deep stretch in hamstrings.",
+        "Contract glutes and hamstrings to bring hips forward to starting position."
+      ],
+      "tips": "Maintain a flat neutral spine. The movement is a pure hip hinge, not a squat.",
+      "primaryMuscle": "Hamstrings",
+      "secondaryMuscles": [
+        "Glutes",
+        "Erector Spinae"
+      ]
+    },
+    {
+      "id": "ex-6",
+      "name": "Walking Dumbbell Lunges",
+      "muscleGroup": "Legs",
+      "category": "Hypertrophy",
+      "equipment": "Dumbbells",
+      "difficulty": "Beginner",
+      "instructions": [
+        "Stand upright holding dumbbells at your sides.",
+        "Step forward with your right leg, landing on heel then forefoot.",
+        "Lower hips until both knees form roughly 90-degree angles.",
+        "Push off the front foot to step directly into the next stride with the opposite leg."
+      ],
+      "tips": "Keep torso upright and do not let the front knee collapse inward.",
+      "primaryMuscle": "Quadriceps & Glutes",
+      "secondaryMuscles": [
+        "Calves",
+        "Core stabilizers"
+      ]
+    },
+    {
+      "id": "ex-7",
+      "name": "Pull-Ups / Chin-Ups",
+      "muscleGroup": "Back",
+      "category": "Strength",
+      "equipment": "Bodyweight",
+      "difficulty": "Intermediate",
+      "instructions": [
+        "Grip the pull-up bar with hands just outside shoulder-width (overhand grip).",
+        "Hang with arms fully extended (dead hang).",
+        "Engage lats and pull chest toward the bar by driving elbows down to your pockets.",
+        "Clear bar with chin, pause, then lower with control."
+      ],
+      "tips": "Avoid swinging or kipping. Use a resistance band if building initial strength.",
+      "primaryMuscle": "Latissimus Dorsi",
+      "secondaryMuscles": [
+        "Biceps",
+        "Rhomboids",
+        "Rear Delts"
+      ]
+    },
+    {
+      "id": "ex-8",
+      "name": "Bent-Over Barbell Row",
+      "muscleGroup": "Back",
+      "category": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "instructions": [
+        "Hinge at hips until torso is roughly 45 degrees to the floor.",
+        "Grip bar with an overhand or underhand grip just wider than shoulder width.",
+        "Pull the barbell to your lower ribcage, squeezing shoulder blades together.",
+        "Lower the weight smoothly under full control."
+      ],
+      "tips": "Do not jerk your upper body up to bounce momentum into the lift.",
+      "primaryMuscle": "Upper Back & Lats",
+      "secondaryMuscles": [
+        "Biceps",
+        "Trapezius",
+        "Posterior Deltoids"
+      ]
+    },
+    {
+      "id": "ex-9",
+      "name": "Seated Cable Row",
+      "muscleGroup": "Back",
+      "category": "Hypertrophy",
+      "equipment": "Cables",
+      "difficulty": "Beginner",
+      "instructions": [
+        "Sit on the bench with feet on footrests and knees slightly bent.",
+        "Grasp the V-bar handle with arms outstretched and spine neutral.",
+        "Pull the handle toward your abdomen while keeping elbows tucked.",
+        "Hold the contraction for 1 second, then slowly release."
+      ],
+      "tips": "Do not swing back and forth excessively with your lower back.",
+      "primaryMuscle": "Rhomboids & Lats",
+      "secondaryMuscles": [
+        "Biceps",
+        "Middle Traps"
+      ]
+    },
+    {
+      "id": "ex-10",
+      "name": "Overhead Barbell Military Press",
+      "muscleGroup": "Shoulders",
+      "category": "Strength",
+      "equipment": "Barbell",
+      "difficulty": "Intermediate",
+      "instructions": [
+        "Hold the barbell on your front collarbone with hands shoulder-width apart.",
+        "Squeeze glutes and brace abs tightly.",
+        "Press the bar vertically upwards, moving head slightly back then pushing forward as bar clears crown.",
+        "Lock out overhead with bar centered above mid-foot."
+      ],
+      "tips": "Do not overarch your lumbar spine. Squeeze glutes to protect your back.",
+      "primaryMuscle": "Anterior & Lateral Deltoid",
+      "secondaryMuscles": [
+        "Triceps",
+        "Upper Traps",
+        "Core"
+      ]
+    },
+    {
+      "id": "ex-11",
+      "name": "Dumbbell Lateral Raise",
+      "muscleGroup": "Shoulders",
+      "category": "Hypertrophy",
+      "equipment": "Dumbbells",
+      "difficulty": "Beginner",
+      "instructions": [
+        "Stand holding light dumbbells at your sides with palms facing inwards.",
+        "Raise arms out to sides with slight bend in elbows until parallel to the floor.",
+        "Pause for a split second at the peak contraction.",
+        "Lower slowly back to starting position."
+      ],
+      "tips": "Lead with your elbows and avoid using momentum or shrugging your traps.",
+      "primaryMuscle": "Lateral Deltoid",
+      "secondaryMuscles": [
+        "Supraspinatus"
+      ]
+    },
+    {
+      "id": "ex-12",
+      "name": "Standing Dumbbell Bicep Curls",
+      "muscleGroup": "Arms",
+      "category": "Hypertrophy",
+      "equipment": "Dumbbells",
+      "difficulty": "Beginner",
+      "instructions": [
+        "Hold dumbbells by your sides with arms extended and palms facing forward.",
+        "Curl the weights upward while keeping upper arms stationary.",
+        "Squeeze biceps at the top of the contraction.",
+        "Lower under control for a 2-second count."
+      ],
+      "tips": "Keep elbows pinned to your ribs; do not swing weights with your torso.",
+      "primaryMuscle": "Biceps Brachii",
+      "secondaryMuscles": [
+        "Brachialis",
+        "Brachioradialis"
+      ]
+    },
+    {
+      "id": "ex-13",
+      "name": "Triceps Rope Pushdown",
+      "muscleGroup": "Arms",
+      "category": "Hypertrophy",
+      "equipment": "Cables",
+      "difficulty": "Beginner",
+      "instructions": [
+        "Attach a rope to high cable pulley. Grasp ends with neutral grip.",
+        "Start with forearms at slightly above 90 degrees.",
+        "Push rope down and flare rope ends slightly outwards at bottom lockout.",
+        "Squeeze triceps hard, then return with control."
+      ],
+      "tips": "Keep elbows locked at your sides throughout the entire range of motion.",
+      "primaryMuscle": "Triceps Brachii (Lateral & Medial heads)",
+      "secondaryMuscles": [
+        "Anconeus"
+      ]
+    },
+    {
+      "id": "ex-14",
+      "name": "Hanging Leg Raises",
+      "muscleGroup": "Core",
+      "category": "Calisthenics",
+      "equipment": "Bodyweight",
+      "difficulty": "Intermediate",
+      "instructions": [
+        "Hang from a pull-up bar with straight arms and legs together.",
+        "Contract abs and tilt pelvis backward.",
+        "Raise straight legs (or knees if modifying) until thighs are parallel or higher to ground.",
+        "Lower smoothly without swinging back and forth."
+      ],
+      "tips": "Initiate the movement by rolling your pelvis up, not just flexing hips.",
+      "primaryMuscle": "Rectus Abdominis (Lower)",
+      "secondaryMuscles": [
+        "Hip Flexors",
+        "Obliques"
+      ]
+    },
+    {
+      "id": "ex-15",
+      "name": "High Intensity Interval Sprint (HIIT)",
+      "muscleGroup": "Cardio",
+      "category": "Cardio",
+      "equipment": "Bodyweight",
+      "difficulty": "Intermediate",
+      "instructions": [
+        "Warm up with 3 minutes of brisk jogging.",
+        "Perform all-out maximum sprint for 20 seconds.",
+        "Walk or slow jog for 40 seconds recovery.",
+        "Repeat for 8 to 10 total rounds, followed by cooldown walk."
+      ],
+      "tips": "Ensure proper running footwear and perform dynamic hamstring warmups first.",
+      "primaryMuscle": "Cardiovascular System",
+      "secondaryMuscles": [
+        "Legs",
+        "Core"
+      ]
+    }
+  ],
+  "dietPlans": [
+    {
+      "id": "diet-1",
+      "userId": "usr-1",
+      "title": "High-Protein Clean Hypertrophy Fuel",
+      "goal": "Muscle Gain",
+      "dietaryPreference": "Non-Vegetarian",
+      "dailyCalories": 2950,
+      "proteinG": 165,
+      "carbsG": 370,
+      "fatsG": 85,
+      "waterLiters": 3.2,
+      "meals": [
+        {
+          "mealType": "Breakfast",
+          "name": "Power Protein Oats & Scramble",
+          "calories": 720,
+          "protein": 48,
+          "carbs": 85,
+          "fat": 20,
+          "items": [
+            {
+              "name": "Rolled Oats with Almond Milk",
+              "portion": "100g dry",
+              "calories": 380,
+              "protein": 12,
+              "carbs": 68,
+              "fat": 6
+            },
+            {
+              "name": "Whole Eggs & Egg Whites Scramble",
+              "portion": "3 eggs + 2 whites",
+              "calories": 240,
+              "protein": 26,
+              "carbs": 2,
+              "fat": 14
+            },
+            {
+              "name": "Fresh Blueberries & Honey",
+              "portion": "1 cup",
+              "calories": 100,
+              "protein": 1,
+              "carbs": 25,
+              "fat": 0
+            }
+          ],
+          "tips": "Drink 500ml cold water alongside breakfast."
+        },
+        {
+          "mealType": "Lunch",
+          "name": "Grilled Herb Chicken & Sweet Potato Bowl",
+          "calories": 820,
+          "protein": 55,
+          "carbs": 95,
+          "fat": 22,
+          "items": [
+            {
+              "name": "Grilled Chicken Breast",
+              "portion": "200g",
+              "calories": 330,
+              "protein": 46,
+              "carbs": 0,
+              "fat": 7
+            },
+            {
+              "name": "Baked Sweet Potato",
+              "portion": "300g",
+              "calories": 270,
+              "protein": 4,
+              "carbs": 62,
+              "fat": 0
+            },
+            {
+              "name": "Steamed Broccoli with Olive Oil",
+              "portion": "1.5 cups + 1 tbsp oil",
+              "calories": 160,
+              "protein": 4,
+              "carbs": 10,
+              "fat": 14
+            }
+          ],
+          "tips": "Rich in potassium and micronutrients to fuel afternoon workouts."
+        },
+        {
+          "mealType": "Evening Snack",
+          "name": "Whey Protein Shake with Banana & Peanut Butter",
+          "calories": 460,
+          "protein": 35,
+          "carbs": 45,
+          "fat": 14,
+          "items": [
+            {
+              "name": "Whey Isolate Protein Powder",
+              "portion": "1 scoop (30g)",
+              "calories": 120,
+              "protein": 25,
+              "carbs": 2,
+              "fat": 1
+            },
+            {
+              "name": "Ripe Banana",
+              "portion": "1 medium",
+              "calories": 110,
+              "protein": 1,
+              "carbs": 28,
+              "fat": 0
+            },
+            {
+              "name": "Natural Peanut Butter",
+              "portion": "1.5 tbsp",
+              "calories": 140,
+              "protein": 6,
+              "carbs": 5,
+              "fat": 12
+            },
+            {
+              "name": "Low-fat Milk / Soy Milk",
+              "portion": "250ml",
+              "calories": 90,
+              "protein": 8,
+              "carbs": 10,
+              "fat": 2
+            }
+          ],
+          "tips": "Consume 45-60 minutes before training for glycogen top-up."
+        },
+        {
+          "mealType": "Dinner",
+          "name": "Salmon Fillet with Quinoa & Asparagus",
+          "calories": 780,
+          "protein": 42,
+          "carbs": 75,
+          "fat": 28,
+          "items": [
+            {
+              "name": "Pan-seared Atlantic Salmon",
+              "portion": "180g",
+              "calories": 370,
+              "protein": 36,
+              "carbs": 0,
+              "fat": 22
+            },
+            {
+              "name": "Cooked Quinoa",
+              "portion": "200g",
+              "calories": 240,
+              "protein": 8,
+              "carbs": 42,
+              "fat": 4
+            },
+            {
+              "name": "Charred Asparagus Spears",
+              "portion": "150g with lemon",
+              "calories": 50,
+              "protein": 3,
+              "carbs": 6,
+              "fat": 1
+            }
+          ],
+          "tips": "Rich in Omega-3 fatty acids for muscle protein synthesis and joint recovery."
+        }
+      ],
+      "guidelines": [
+        "Spread protein evenly across 4 meals (approx 35-50g per meal).",
+        "Prioritize whole carbohydrate sources (sweet potato, oats, quinoa, fruit) for sustained energy.",
+        "Consume 500ml water upon waking and before each major meal."
+      ],
+      "safetyWarnings": [
+        "Diet recommendations are intended for general fitness and performance, not clinical treatment.",
+        "Consult a licensed dietitian or physician before making radical caloric or dietary changes.",
+        "Verify meal selections against any known food allergies or medical restrictions."
+      ],
+      "generatedByAI": true,
+      "createdAt": "2026-10-30T13:13:12.418Z"
+    }
+  ],
+  "progressHistory": [
+    {
+      "id": "prog-1",
+      "userId": "usr-1",
+      "date": "2026-10-16",
+      "weightKg": 74.2,
+      "workoutsCompleted": 1,
+      "completedWorkoutTitle": "Upper Body Strength",
+      "caloriesConsumed": 2850,
+      "notes": "Felt strong, solid bench press sets.",
+      "loggedAt": "2026-10-16T13:13:12.418Z"
+    },
+    {
+      "id": "prog-2",
+      "userId": "usr-1",
+      "date": "2026-10-18",
+      "weightKg": 74.5,
+      "workoutsCompleted": 1,
+      "completedWorkoutTitle": "Lower Body Quads",
+      "caloriesConsumed": 2900,
+      "notes": "Hit squat depth, good quad pump.",
+      "loggedAt": "2026-10-18T13:13:12.418Z"
+    },
+    {
+      "id": "prog-3",
+      "userId": "usr-1",
+      "date": "2026-10-21",
+      "weightKg": 74.8,
+      "workoutsCompleted": 1,
+      "completedWorkoutTitle": "Upper Body Strength",
+      "caloriesConsumed": 2920,
+      "notes": "Moved bench up 2.5kg.",
+      "loggedAt": "2026-10-21T13:13:12.418Z"
+    },
+    {
+      "id": "prog-4",
+      "userId": "usr-1",
+      "date": "2026-10-23",
+      "weightKg": 75,
+      "workoutsCompleted": 1,
+      "completedWorkoutTitle": "Lower Body Quads",
+      "caloriesConsumed": 3000,
+      "notes": "Hamstring stretch felt great on RDLs.",
+      "loggedAt": "2026-10-23T13:13:12.418Z"
+    },
+    {
+      "id": "prog-5",
+      "userId": "usr-1",
+      "date": "2026-10-26",
+      "weightKg": 75.2,
+      "workoutsCompleted": 1,
+      "completedWorkoutTitle": "Upper Body Hypertrophy",
+      "caloriesConsumed": 2950,
+      "notes": "Excellent arm pump, energy was high.",
+      "loggedAt": "2026-10-26T13:13:12.418Z"
+    },
+    {
+      "id": "prog-6",
+      "userId": "usr-1",
+      "date": "2026-10-29",
+      "weightKg": 75.5,
+      "workoutsCompleted": 1,
+      "completedWorkoutTitle": "Lower Body & Core",
+      "caloriesConsumed": 2980,
+      "notes": "Progressing nicely towards target 80kg weight goal!",
+      "loggedAt": "2026-10-29T13:13:12.418Z"
+    }
+  ],
+  "trainerNotes": [
+    {
+      "id": "note-1",
+      "staffId": "usr-2",
+      "staffName": "Coach Sarah Jenkins",
+      "userId": "usr-1",
+      "clientName": "Alex Mercer",
+      "note": "Alex has shown consistent 4-day attendance. Bench press form looks stable with retracted scapula. Recommend progressive overload of +1kg on squats next week.",
+      "recommendation": "Increase pre-workout carbohydrate intake by 25g on lower body days.",
+      "createdAt": "2026-10-27T13:13:12.418Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-1793369486360-bv6dg",
+      "userId": "usr-1",
+      "title": "⚡ Workout Scheduled: Day 1: Upper Body Strength & Power",
+      "message": "Hey Alex Mercer, your Chest, Back, Delts & Arms session is waiting! 4 exercises (55 mins). Keep your consistency streak alive!",
+      "workoutDayName": "Day 1: Upper Body Strength & Power",
+      "exerciseCount": 4,
+      "channel": "push",
+      "status": "delivered",
+      "emailDetails": {
+        "to": "alex@fitpulse.ai",
+        "subject": "🏋️ Ready for today's workout? - Day 1: Upper Body Strength & Power (Alex Mercer)",
+        "htmlBody": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <title>🏋️ Ready for today's workout? - Day 1: Upper Body Strength & Power (Alex Mercer)</title>\n</head>\n<body style=\"margin: 0; padding: 20px; background-color: #020617; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #f8fafc;\">\n  <div style=\"max-width: 600px; margin: 0 auto; background-color: #0f172a; border: 1px solid #1e293b; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);\">\n    <!-- Header -->\n    <div style=\"background: linear-gradient(135deg, #064e3b 0%, #0f172a 100%); padding: 30px 24px; border-bottom: 1px solid #10b98133;\">\n      <div style=\"display: flex; align-items: center; gap: 8px; margin-bottom: 8px;\">\n        <span style=\"font-size: 24px; font-weight: 900; color: #10b981; letter-spacing: -0.5px;\">FitPulse</span>\n        <span style=\"font-size: 11px; font-weight: bold; background: #10b98122; color: #10b981; padding: 2px 8px; border-radius: 6px; border: 1px solid #10b98144;\">AI REMINDER</span>\n      </div>\n      <h1 style=\"margin: 0; font-size: 22px; color: #ffffff; font-weight: 800;\">Time to Train, Alex Mercer!</h1>\n      <p style=\"margin: 6px 0 0 0; font-size: 13px; color: #94a3b8;\">Your scheduled workout is ready on your personalized dashboard.</p>\n    </div>\n\n    <!-- Body -->\n    <div style=\"padding: 24px;\">\n      <!-- Workout Card -->\n      <div style=\"background-color: #020617; border: 1px solid #1e293b; border-radius: 12px; padding: 18px; margin-bottom: 20px;\">\n        <div style=\"font-size: 11px; font-weight: bold; color: #10b981; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;\">Today's Session</div>\n        <div style=\"font-size: 17px; font-weight: bold; color: #ffffff; margin-bottom: 6px;\">Day 1: Upper Body Strength & Power</div>\n        <div style=\"font-size: 12px; color: #94a3b8; margin-bottom: 14px;\">Focus: <strong style=\"color: #cbd5e1;\">Chest, Back, Delts & Arms</strong> • Estimated: <strong style=\"color: #cbd5e1;\">55 mins</strong></div>\n\n        <table style=\"width: 100%; border-collapse: collapse; font-size: 12px; text-align: left;\">\n          <thead>\n            <tr style=\"border-bottom: 1px solid #334155; color: #64748b; font-size: 10px; text-transform: uppercase;\">\n              <th style=\"padding: 6px 12px;\">#</th>\n              <th style=\"padding: 6px 12px;\">Exercise</th>\n              <th style=\"padding: 6px 12px;\">Muscle</th>\n              <th style=\"padding: 6px 12px; text-align: right;\">Prescription</th>\n            </tr>\n          </thead>\n          <tbody>\n            \n        <tr style=\"border-bottom: 1px solid #1e293b;\">\n          <td style=\"padding: 10px 12px; color: #10b981; font-weight: bold;\">#1</td>\n          <td style=\"padding: 10px 12px; color: #f8fafc; font-weight: 600;\">Barbell Bench Press</td>\n          <td style=\"padding: 10px 12px; color: #94a3b8;\">Chest</td>\n          <td style=\"padding: 10px 12px; color: #38bdf8; font-family: monospace; font-weight: bold; text-align: right;\">4 × 6-8</td>\n        </tr>\n      \n        <tr style=\"border-bottom: 1px solid #1e293b;\">\n          <td style=\"padding: 10px 12px; color: #10b981; font-weight: bold;\">#2</td>\n          <td style=\"padding: 10px 12px; color: #f8fafc; font-weight: 600;\">Bent-Over Barbell Row</td>\n          <td style=\"padding: 10px 12px; color: #94a3b8;\">Back</td>\n          <td style=\"padding: 10px 12px; color: #38bdf8; font-family: monospace; font-weight: bold; text-align: right;\">4 × 8-10</td>\n        </tr>\n      \n        <tr style=\"border-bottom: 1px solid #1e293b;\">\n          <td style=\"padding: 10px 12px; color: #10b981; font-weight: bold;\">#3</td>\n          <td style=\"padding: 10px 12px; color: #f8fafc; font-weight: 600;\">Overhead Barbell Military Press</td>\n          <td style=\"padding: 10px 12px; color: #94a3b8;\">Shoulders</td>\n          <td style=\"padding: 10px 12px; color: #38bdf8; font-family: monospace; font-weight: bold; text-align: right;\">3 × 8-10</td>\n        </tr>\n      \n        <tr style=\"border-bottom: 1px solid #1e293b;\">\n          <td style=\"padding: 10px 12px; color: #10b981; font-weight: bold;\">#4</td>\n          <td style=\"padding: 10px 12px; color: #f8fafc; font-weight: 600;\">Standing Dumbbell Bicep Curls</td>\n          <td style=\"padding: 10px 12px; color: #94a3b8;\">Arms</td>\n          <td style=\"padding: 10px 12px; color: #38bdf8; font-family: monospace; font-weight: bold; text-align: right;\">3 × 12</td>\n        </tr>\n      \n          </tbody>\n        </table>\n      </div>\n\n      <!-- Quick Nutrition Reminder -->\n      <div style=\"display: flex; gap: 12px; background: #020617; border: 1px solid #1e293b; border-radius: 12px; padding: 14px; margin-bottom: 20px;\">\n        <div style=\"flex: 1; text-align: center; border-right: 1px solid #1e293b; padding-right: 10px;\">\n          <div style=\"font-size: 10px; color: #94a3b8; text-transform: uppercase;\">Goal</div>\n          <div style=\"font-size: 13px; font-weight: bold; color: #10b981; margin-top: 2px;\">Muscle Gain</div>\n        </div>\n        <div style=\"flex: 1; text-align: center; border-right: 1px solid #1e293b; padding-right: 10px;\">\n          <div style=\"font-size: 10px; color: #94a3b8; text-transform: uppercase;\">Calorie Target</div>\n          <div style=\"font-size: 13px; font-weight: bold; color: #f59e0b; margin-top: 2px;\">2950 kcal</div>\n        </div>\n        <div style=\"flex: 1; text-align: center;\">\n          <div style=\"font-size: 10px; color: #94a3b8; text-transform: uppercase;\">Protein Target</div>\n          <div style=\"font-size: 13px; font-weight: bold; color: #38bdf8; margin-top: 2px;\">165g</div>\n        </div>\n      </div>\n\n      <!-- Motivational Callout -->\n      <div style=\"background-color: #064e3b15; border-left: 3px solid #10b981; padding: 12px 16px; border-radius: 4px; margin-bottom: 24px; font-style: italic; font-size: 12px; color: #a7f3d0;\">\n        \"Consistency is the catalyst of greatness. Your future self will thank you for today's effort.\"\n      </div>\n\n      <!-- Action Button -->\n      <div style=\"text-align: center; margin-bottom: 10px;\">\n        <a href=\"http://localhost:3000\" style=\"display: inline-block; background: #10b981; color: #020617; font-weight: 800; font-size: 14px; text-decoration: none; padding: 12px 32px; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);\">\n          Start Live Workout Session →\n        </a>\n      </div>\n    </div>\n\n    <!-- Footer -->\n    <div style=\"padding: 16px 24px; background: #020617; border-top: 1px solid #1e293b; text-align: center; font-size: 11px; color: #64748b;\">\n      FitPulse AI Notification Engine • Sent to alex@fitpulse.ai according to your scheduled preferences.\n    </div>\n  </div>\n</body>\n</html>",
+        "sentAt": "2026-10-30T14:11:26.360Z"
+      },
+      "createdAt": "2026-10-30T14:11:26.360Z"
+    },
+    {
+      "id": "notif-1793369446367-yxa36",
+      "userId": "usr-1",
+      "title": "⚡ Workout Scheduled: Day 1: Upper Body Strength & Power",
+      "message": "Hey Alex Mercer, your Chest, Back, Delts & Arms session is waiting! 4 exercises (55 mins). Keep your consistency streak alive!",
+      "workoutDayName": "Day 1: Upper Body Strength & Power",
+      "exerciseCount": 4,
+      "channel": "push",
+      "status": "delivered",
+      "emailDetails": {
+        "to": "alex@fitpulse.ai",
+        "subject": "🏋️ Ready for today's workout? - Day 1: Upper Body Strength & Power (Alex Mercer)",
+        "htmlBody": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <title>🏋️ Ready for today's workout? - Day 1: Upper Body Strength & Power (Alex Mercer)</title>\n</head>\n<body style=\"margin: 0; padding: 20px; background-color: #020617; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #f8fafc;\">\n  <div style=\"max-width: 600px; margin: 0 auto; background-color: #0f172a; border: 1px solid #1e293b; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);\">\n    <!-- Header -->\n    <div style=\"background: linear-gradient(135deg, #064e3b 0%, #0f172a 100%); padding: 30px 24px; border-bottom: 1px solid #10b98133;\">\n      <div style=\"display: flex; align-items: center; gap: 8px; margin-bottom: 8px;\">\n        <span style=\"font-size: 24px; font-weight: 900; color: #10b981; letter-spacing: -0.5px;\">FitPulse</span>\n        <span style=\"font-size: 11px; font-weight: bold; background: #10b98122; color: #10b981; padding: 2px 8px; border-radius: 6px; border: 1px solid #10b98144;\">AI REMINDER</span>\n      </div>\n      <h1 style=\"margin: 0; font-size: 22px; color: #ffffff; font-weight: 800;\">Time to Train, Alex Mercer!</h1>\n      <p style=\"margin: 6px 0 0 0; font-size: 13px; color: #94a3b8;\">Your scheduled workout is ready on your personalized dashboard.</p>\n    </div>\n\n    <!-- Body -->\n    <div style=\"padding: 24px;\">\n      <!-- Workout Card -->\n      <div style=\"background-color: #020617; border: 1px solid #1e293b; border-radius: 12px; padding: 18px; margin-bottom: 20px;\">\n        <div style=\"font-size: 11px; font-weight: bold; color: #10b981; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;\">Today's Session</div>\n        <div style=\"font-size: 17px; font-weight: bold; color: #ffffff; margin-bottom: 6px;\">Day 1: Upper Body Strength & Power</div>\n        <div style=\"font-size: 12px; color: #94a3b8; margin-bottom: 14px;\">Focus: <strong style=\"color: #cbd5e1;\">Chest, Back, Delts & Arms</strong> • Estimated: <strong style=\"color: #cbd5e1;\">55 mins</strong></div>\n\n        <table style=\"width: 100%; border-collapse: collapse; font-size: 12px; text-align: left;\">\n          <thead>\n            <tr style=\"border-bottom: 1px solid #334155; color: #64748b; font-size: 10px; text-transform: uppercase;\">\n              <th style=\"padding: 6px 12px;\">#</th>\n              <th style=\"padding: 6px 12px;\">Exercise</th>\n              <th style=\"padding: 6px 12px;\">Muscle</th>\n              <th style=\"padding: 6px 12px; text-align: right;\">Prescription</th>\n            </tr>\n          </thead>\n          <tbody>\n            \n        <tr style=\"border-bottom: 1px solid #1e293b;\">\n          <td style=\"padding: 10px 12px; color: #10b981; font-weight: bold;\">#1</td>\n          <td style=\"padding: 10px 12px; color: #f8fafc; font-weight: 600;\">Barbell Bench Press</td>\n          <td style=\"padding: 10px 12px; color: #94a3b8;\">Chest</td>\n          <td style=\"padding: 10px 12px; color: #38bdf8; font-family: monospace; font-weight: bold; text-align: right;\">4 × 6-8</td>\n        </tr>\n      \n        <tr style=\"border-bottom: 1px solid #1e293b;\">\n          <td style=\"padding: 10px 12px; color: #10b981; font-weight: bold;\">#2</td>\n          <td style=\"padding: 10px 12px; color: #f8fafc; font-weight: 600;\">Bent-Over Barbell Row</td>\n          <td style=\"padding: 10px 12px; color: #94a3b8;\">Back</td>\n          <td style=\"padding: 10px 12px; color: #38bdf8; font-family: monospace; font-weight: bold; text-align: right;\">4 × 8-10</td>\n        </tr>\n      \n        <tr style=\"border-bottom: 1px solid #1e293b;\">\n          <td style=\"padding: 10px 12px; color: #10b981; font-weight: bold;\">#3</td>\n          <td style=\"padding: 10px 12px; color: #f8fafc; font-weight: 600;\">Overhead Barbell Military Press</td>\n          <td style=\"padding: 10px 12px; color: #94a3b8;\">Shoulders</td>\n          <td style=\"padding: 10px 12px; color: #38bdf8; font-family: monospace; font-weight: bold; text-align: right;\">3 × 8-10</td>\n        </tr>\n      \n        <tr style=\"border-bottom: 1px solid #1e293b;\">\n          <td style=\"padding: 10px 12px; color: #10b981; font-weight: bold;\">#4</td>\n          <td style=\"padding: 10px 12px; color: #f8fafc; font-weight: 600;\">Standing Dumbbell Bicep Curls</td>\n          <td style=\"padding: 10px 12px; color: #94a3b8;\">Arms</td>\n          <td style=\"padding: 10px 12px; color: #38bdf8; font-family: monospace; font-weight: bold; text-align: right;\">3 × 12</td>\n        </tr>\n      \n          </tbody>\n        </table>\n      </div>\n\n      <!-- Quick Nutrition Reminder -->\n      <div style=\"display: flex; gap: 12px; background: #020617; border: 1px solid #1e293b; border-radius: 12px; padding: 14px; margin-bottom: 20px;\">\n        <div style=\"flex: 1; text-align: center; border-right: 1px solid #1e293b; padding-right: 10px;\">\n          <div style=\"font-size: 10px; color: #94a3b8; text-transform: uppercase;\">Goal</div>\n          <div style=\"font-size: 13px; font-weight: bold; color: #10b981; margin-top: 2px;\">Muscle Gain</div>\n        </div>\n        <div style=\"flex: 1; text-align: center; border-right: 1px solid #1e293b; padding-right: 10px;\">\n          <div style=\"font-size: 10px; color: #94a3b8; text-transform: uppercase;\">Calorie Target</div>\n          <div style=\"font-size: 13px; font-weight: bold; color: #f59e0b; margin-top: 2px;\">2950 kcal</div>\n        </div>\n        <div style=\"flex: 1; text-align: center;\">\n          <div style=\"font-size: 10px; color: #94a3b8; text-transform: uppercase;\">Protein Target</div>\n          <div style=\"font-size: 13px; font-weight: bold; color: #38bdf8; margin-top: 2px;\">165g</div>\n        </div>\n      </div>\n\n      <!-- Motivational Callout -->\n      <div style=\"background-color: #064e3b15; border-left: 3px solid #10b981; padding: 12px 16px; border-radius: 4px; margin-bottom: 24px; font-style: italic; font-size: 12px; color: #a7f3d0;\">\n        \"Discipline is choosing between what you want now and what you want most.\"\n      </div>\n\n      <!-- Action Button -->\n      <div style=\"text-align: center; margin-bottom: 10px;\">\n        <a href=\"http://localhost:3000\" style=\"display: inline-block; background: #10b981; color: #020617; font-weight: 800; font-size: 14px; text-decoration: none; padding: 12px 32px; border-radius: 10px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);\">\n          Start Live Workout Session →\n        </a>\n      </div>\n    </div>\n\n    <!-- Footer -->\n    <div style=\"padding: 16px 24px; background: #020617; border-top: 1px solid #1e293b; text-align: center; font-size: 11px; color: #64748b;\">\n      FitPulse AI Notification Engine • Sent to alex@fitpulse.ai according to your scheduled preferences.\n    </div>\n  </div>\n</body>\n</html>",
+        "sentAt": "2026-10-30T14:10:46.365Z"
+      },
+      "createdAt": "2026-10-30T14:10:46.365Z"
+    }
+  ],
+  "notificationSettings": [
+    {
+      "userId": "usr-1",
+      "pushEnabled": true,
+      "emailEnabled": true,
+      "reminderTime": "08:00",
+      "reminderDays": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "includeMotivationalQuote": true,
+      "updatedAt": "2026-10-30T14:11:26.361Z",
+      "lastTriggeredDate": "2026-10-30"
+    }
+  ]
+}
